@@ -20,10 +20,14 @@ public class App {
         switch (choice) {
             case "1":
                 Cli.greet();
+                break;
             case "2":
                 Even.game();
+                break;
             case "3":
                 Calc.game();
+                break;
+            default:
         }
     }
 }

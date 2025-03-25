@@ -3,14 +3,12 @@ package hexlet.code;
 import java.util.Scanner;
 
 public class Engine {
-    private static final int target = 3;
-    private static final Scanner scanner = new Scanner(System.in);
-
-
-    public static void runGame(String gameName, String[] questions, String[] answers ) {
+    public static void runGame(String gameName, String[] questions, String[] answers) {
         Cli.greet();
         System.out.println(gameName);
 
+        Scanner scanner = new Scanner(System.in);
+        int target = 3;
         int sum = 0;
         var i = 0;
 

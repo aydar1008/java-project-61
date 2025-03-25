@@ -32,7 +32,6 @@ public class Calc {
                 default:
             }
         }
-            Engine.runGame(gameName, questions, answers);
-
+        Engine.runGame(gameName, questions, answers);
     }
 }

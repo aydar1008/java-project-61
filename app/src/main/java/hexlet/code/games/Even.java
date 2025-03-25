@@ -16,7 +16,6 @@ public class Even {
             questions[i] = String.valueOf(random.nextInt(maxNum));
             answers[i] = Integer.parseInt(questions[i]) % 2 == 0 ? "yes" : "no";
         }
-
         Engine.runGame(gameName, questions, answers);
     }
 }

@@ -7,8 +7,8 @@ public class Cli {
 
     public static void greet() {
         System.out.println("\nWelcome to the Brain Games!");
-        Scanner scanner = new Scanner(System.in);
         System.out.println("May I have your name?");
+        Scanner scanner = new Scanner(System.in);
         name = scanner.next();
         System.out.println("Hello, " + name);
         //scanner.close();
