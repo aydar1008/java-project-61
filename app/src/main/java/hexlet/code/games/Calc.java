@@ -7,7 +7,7 @@ import java.util.Random;
 public class Calc {
     public static void game() {
         Random random = new Random();
-        var maxNum = 50;
+        var maxNum = 10;
         var gameName = "What is the result of the expression?";
         var operators = "+-*";
 
