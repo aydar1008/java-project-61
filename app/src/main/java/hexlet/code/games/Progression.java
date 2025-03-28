@@ -8,7 +8,6 @@ import java.util.Random;
 public class Progression {
     public static void game() {
         Random random = new Random();
-        var maxNum = random.nextInt(100);
         var gameName = "What number is missing in the progression?";
 
         String[] questions = new String[3];

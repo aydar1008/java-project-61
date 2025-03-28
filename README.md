@@ -12,3 +12,5 @@
 [GCD GAME][https://asciinema.org/a/TIPVtWvzT60dIpoTuOHvEMLXJ]
 
 [PROGRASSION GAME][https://asciinema.org/a/n0nrRNbkcB6hVnpg2vBcyvVUI]
+
+[PRIME GAME][https://asciinema.org/a/gAgKzpXkf69KW3vFmUl9q7kMe]
