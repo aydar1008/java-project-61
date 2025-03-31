@@ -5,8 +5,9 @@ import hexlet.code.Engine;
 import java.util.Random;
 
 public class Calc {
+    private static final Random random = new Random();
+
     public static void game() {
-        Random random = new Random();
         var maxNum = 10;
         var gameName = "What is the result of the expression?";
         var operators = "+-*";

@@ -5,8 +5,9 @@ import hexlet.code.Engine;
 import java.util.Random;
 
 public class Prime {
+    private static final Random random = new Random();
+
     public static void game() {
-        Random random = new Random();
         var maxNum = 100;
         var gameName = "Answer 'yes' if given number is prime. Otherwise answer 'no'.";
 

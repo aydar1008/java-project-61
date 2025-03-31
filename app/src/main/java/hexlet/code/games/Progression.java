@@ -6,8 +6,9 @@ import java.util.Arrays;
 import java.util.Random;
 
 public class Progression {
+    private static final Random random = new Random();
+
     public static void game() {
-        Random random = new Random();
         var gameName = "What number is missing in the progression?";
 
         String[] questions = new String[3];

@@ -5,8 +5,9 @@ import hexlet.code.Engine;
 import java.util.Random;
 
 public class Even {
+    private static final Random random = new Random();
+
     public static void game() {
-        Random random = new Random();
         var maxNum = 999;
         var gameName = "Answer 'yes' if the number is even, otherwise answer 'no'.";
 

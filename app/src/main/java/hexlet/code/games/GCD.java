@@ -5,8 +5,9 @@ import hexlet.code.Engine;
 import java.util.Random;
 
 public class GCD {
+    private static final Random random = new Random();
+
     public static void game() {
-        Random random = new Random();
         var maxNum = 100;
         var gameName = "Find the greatest common divisor of given numbers.";
 
