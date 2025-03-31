@@ -2,11 +2,11 @@ package hexlet.code.games;
 
 import hexlet.code.Engine;
 
+import java.security.SecureRandom;
 import java.util.Arrays;
-import java.util.Random;
 
 public class Progression {
-    private static final Random random = new Random();
+    private static final SecureRandom random = new SecureRandom();
 
     public static void game() {
         var gameName = "What number is missing in the progression?";

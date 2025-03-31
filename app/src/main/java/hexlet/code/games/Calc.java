@@ -2,10 +2,11 @@ package hexlet.code.games;
 
 import hexlet.code.Engine;
 
-import java.util.Random;
+import java.security.SecureRandom;
+
 
 public class Calc {
-    private static final Random random = new Random();
+    private static final SecureRandom random = new SecureRandom();
 
     public static void game() {
         var maxNum = 10;
