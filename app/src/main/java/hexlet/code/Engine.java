@@ -4,10 +4,14 @@ import java.util.Scanner;
 
 public class Engine {
     public static void runGame(String gameName, String[] questions, String[] answers) {
-        Cli.greet();
+        System.out.println("\nWelcome to the Brain Games!");
+        System.out.println("May I have your name?");
+        Scanner scanner = new Scanner(System.in);
+        var name = scanner.next();
+        System.out.println("Hello, " + name);
+
         System.out.println(gameName);
 
-        Scanner scanner = new Scanner(System.in);
         int rounds = 3;
         int sum = 0;
         var i = 0;
@@ -21,12 +25,12 @@ public class Engine {
                 i++;
             } else {
                 System.out.println("'" + answer + "' is wrong answer ;(. Correct answer was '" + answers[i]
-                        + "'. \nLet's try again, " + Cli.name);
+                        + "'. \nLet's try again, " + name);
                 break;
             }
         }
         if (sum == rounds) {
-            System.out.println("Congratulation, " + Cli.name + "!");
+            System.out.println("Congratulation, " + name + "!");
         }
         scanner.close();
     }

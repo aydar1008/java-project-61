@@ -8,7 +8,7 @@ public class Prime {
     private static final SecureRandom RANDOM = new SecureRandom();
 
     public static void playGame() {
-        var maxRandomNumber = 100;
+        int maxRandomNumber = 100;
         var rounds = 3;
         var gameName = "Answer 'yes' if given number is prime. Otherwise answer 'no'.";
 
