@@ -28,19 +28,19 @@ public class App {
                 Cli.greet();
                 break;
             case "2":
-                Even.game();
+                Even.playGame();
                 break;
             case "3":
-                Calc.game();
+                Calc.playGame();
                 break;
             case "4":
-                GCD.game();
+                GCD.playGame();
                 break;
             case "5":
-                Progression.game();
+                Progression.playGame();
                 break;
             case "6":
-                Prime.game();
+                Prime.playGame();
                 break;
             default:
         }

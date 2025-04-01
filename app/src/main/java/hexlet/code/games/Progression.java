@@ -6,20 +6,21 @@ import java.security.SecureRandom;
 import java.util.Arrays;
 
 public class Progression {
-    private static final SecureRandom random = new SecureRandom();
+    private static final SecureRandom RANDOM = new SecureRandom();
 
-    public static void game() {
+    public static void playGame() {
         var gameName = "What number is missing in the progression?";
+        var rounds = 3;
 
-        String[] questions = new String[3];
-        String[] answers = new String[3];
+        String[] questions = new String[rounds];
+        String[] answers = new String[rounds];
         for (int i = 0; i < questions.length; i++) {
-            var progLength = random.nextInt(5, 10);
-            var step = random.nextInt(1, 10);
-            var searched = random.nextInt(0, progLength);
+            var progLength = RANDOM.nextInt(5, 10);
+            var step = RANDOM.nextInt(1, 10);
+            var searched = RANDOM.nextInt(0, progLength);
 
             String[] progression = new String[progLength];
-            progression[0] = "" + random.nextInt(0, 100);
+            progression[0] = "" + RANDOM.nextInt(0, 100);
             for (int j = 1; j < progression.length; j++) {
                 progression[j] = Integer.parseInt(progression[j - 1]) + step + "";
             }

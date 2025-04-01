@@ -5,16 +5,17 @@ import hexlet.code.Engine;
 import java.security.SecureRandom;
 
 public class Prime {
-    private static final SecureRandom random = new SecureRandom();
+    private static final SecureRandom RANDOM = new SecureRandom();
 
-    public static void game() {
-        var maxNum = 100;
+    public static void playGame() {
+        var maxRandomNumber = 100;
+        var rounds = 3;
         var gameName = "Answer 'yes' if given number is prime. Otherwise answer 'no'.";
 
-        String[] questions = new String[3];
-        String[] answers = new String[3];
+        String[] questions = new String[rounds];
+        String[] answers = new String[rounds];
         for (int i = 0; i < questions.length; i++) {
-            var num = random.nextInt(maxNum);
+            var num = RANDOM.nextInt(maxRandomNumber);
             questions[i] = String.valueOf(num);
 
             boolean isPrime = true;

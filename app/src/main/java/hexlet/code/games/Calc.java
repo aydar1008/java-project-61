@@ -6,19 +6,20 @@ import java.security.SecureRandom;
 
 
 public class Calc {
-    private static final SecureRandom random = new SecureRandom();
+    private static final SecureRandom RANDOM = new SecureRandom();
 
-    public static void game() {
-        var maxNum = 10;
+    public static void playGame() {
+        int maxRandomNumber = 10;
+        int rounds = 3;
         var gameName = "What is the result of the expression?";
         var operators = "+-*";
 
-        String[] questions = new String[3];
-        String[] answers = new String[3];
+        String[] questions = new String[rounds];
+        String[] answers = new String[rounds];
         for (int i = 0; i < questions.length; i++) {
-            var num1 = random.nextInt(maxNum);
-            var num2 = random.nextInt(maxNum);
-            var opIndex = random.nextInt(operators.length());
+            var num1 = RANDOM.nextInt(maxRandomNumber);
+            var num2 = RANDOM.nextInt(maxRandomNumber);
+            var opIndex = RANDOM.nextInt(operators.length());
             var operator = operators.charAt(opIndex);
             questions[i] = "" + num1 + operator + num2;
             switch (operator) {

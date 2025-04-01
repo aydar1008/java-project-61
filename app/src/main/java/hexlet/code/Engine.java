@@ -8,11 +8,11 @@ public class Engine {
         System.out.println(gameName);
 
         Scanner scanner = new Scanner(System.in);
-        int target = 3;
+        int rounds = 3;
         int sum = 0;
         var i = 0;
 
-        while (sum < target) {
+        while (sum < rounds) {
             System.out.println("Question: " + questions[i]);
             var answer = scanner.next();
             if (answers[i].equals(answer)) {
@@ -25,7 +25,7 @@ public class Engine {
                 break;
             }
         }
-        if (sum == target) {
+        if (sum == rounds) {
             System.out.println("Congratulation, " + Cli.name + "!");
         }
         scanner.close();
