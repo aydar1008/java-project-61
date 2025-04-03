@@ -2,24 +2,20 @@ package hexlet.code.games;
 
 import hexlet.code.Engine;
 
-import java.security.SecureRandom;
-
 
 public class Calc {
-    private static final SecureRandom RANDOM = new SecureRandom();
+    private static final int MAX_RANDOM_NUMBER = 100;
 
     public static void playGame() {
-        int maxRandomNumber = 10;
-        int rounds = 3;
         var gameName = "What is the result of the expression?";
         var operators = "+-*";
 
-        String[] questions = new String[rounds];
-        String[] answers = new String[rounds];
+        String[] questions = new String[Engine.ROUNDS];
+        String[] answers = new String[Engine.ROUNDS];
         for (int i = 0; i < questions.length; i++) {
-            var num1 = RANDOM.nextInt(maxRandomNumber);
-            var num2 = RANDOM.nextInt(maxRandomNumber);
-            var opIndex = RANDOM.nextInt(operators.length());
+            var num1 = Engine.RANDOM.nextInt(MAX_RANDOM_NUMBER);
+            var num2 = Engine.RANDOM.nextInt(MAX_RANDOM_NUMBER);
+            var opIndex = Engine.RANDOM.nextInt(operators.length());
             var operator = operators.charAt(opIndex);
             questions[i] = "" + num1 + operator + num2;
             switch (operator) {

@@ -2,20 +2,16 @@ package hexlet.code.games;
 
 import hexlet.code.Engine;
 
-import java.security.SecureRandom;
-
 public class Prime {
-    private static final SecureRandom RANDOM = new SecureRandom();
+    private static final int MAX_RANDOM_NUMBER = 100;
 
     public static void playGame() {
-        int maxRandomNumber = 100;
-        var rounds = 3;
         var gameName = "Answer 'yes' if given number is prime. Otherwise answer 'no'.";
 
-        String[] questions = new String[rounds];
-        String[] answers = new String[rounds];
+        String[] questions = new String[Engine.ROUNDS];
+        String[] answers = new String[Engine.ROUNDS];
         for (int i = 0; i < questions.length; i++) {
-            var num = RANDOM.nextInt(maxRandomNumber);
+            var num = Engine.RANDOM.nextInt(MAX_RANDOM_NUMBER);
             questions[i] = String.valueOf(num);
 
             boolean isPrime = true;
@@ -26,7 +22,7 @@ public class Prime {
             } else if (num % 2 == 0) {
                 isPrime = false;
             } else {
-                for (int j = 3; j <= Math.sqrt(num); j += 2) {
+                for (int j = 2; j < num; j++) {
                     if (num % j == 0) {
                         isPrime = false;
                         break;
