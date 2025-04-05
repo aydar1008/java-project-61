@@ -33,7 +33,7 @@ public class Engine {
             }
         }
         if (sum == ROUNDS) {
-            System.out.println("Congratulation, " + name + "!");
+            System.out.println("Congratulations, " + name + "!");
         }
         scanner.close();
     }
