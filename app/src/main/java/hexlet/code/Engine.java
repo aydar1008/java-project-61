@@ -12,7 +12,7 @@ public class Engine {
         System.out.println("May I have your name?");
         Scanner scanner = new Scanner(System.in);
         var name = scanner.next();
-        System.out.println("Hello, " + name);
+        System.out.println("Hello, " + name + "!");
 
         System.out.println(gameName);
 
