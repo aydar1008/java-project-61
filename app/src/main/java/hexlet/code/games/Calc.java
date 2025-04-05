@@ -17,7 +17,7 @@ public class Calc {
             var num2 = Engine.RANDOM.nextInt(MAX_RANDOM_NUMBER);
             var opIndex = Engine.RANDOM.nextInt(operators.length());
             var operator = operators.charAt(opIndex);
-            questions[i] = "" + num1 + operator + num2;
+            questions[i] = num1 + " " + operator + " " + num2;
             switch (operator) {
                 case '+':
                     answers[i] = num1 + num2 + "";
