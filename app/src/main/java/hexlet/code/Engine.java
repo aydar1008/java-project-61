@@ -6,12 +6,12 @@ import java.util.Scanner;
 public class Engine {
     public static final int ROUNDS = 3;
     public static final SecureRandom RANDOM = new SecureRandom();
-    public static final Scanner scanner = new Scanner(System.in);
+    public static final Scanner SCANNER = new Scanner(System.in);
 
     public static void runGame(String gameName, String[] questions, String[] answers) {
         System.out.println("\nWelcome to the Brain Games!");
         System.out.println("May I have your name?");
-        var name = scanner.next();
+        var name = SCANNER.next();
         System.out.println("Hello, " + name + "!");
 
         System.out.println(gameName);
@@ -21,7 +21,7 @@ public class Engine {
 
         while (sum < ROUNDS) {
             System.out.println("Question: " + questions[i]);
-            var answer = scanner.next();
+            var answer = SCANNER.next();
             if (answers[i].equals(answer)) {
                 System.out.println("Correct!");
                 sum++;
@@ -35,6 +35,6 @@ public class Engine {
         if (sum == ROUNDS) {
             System.out.println("Congratulations, " + name + "!");
         }
-        scanner.close();
+        SCANNER.close();
     }
 }
