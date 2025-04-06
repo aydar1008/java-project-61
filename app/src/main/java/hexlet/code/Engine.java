@@ -6,11 +6,11 @@ import java.util.Scanner;
 public class Engine {
     public static final int ROUNDS = 3;
     public static final SecureRandom RANDOM = new SecureRandom();
+    public static final Scanner scanner = new Scanner(System.in);
 
     public static void runGame(String gameName, String[] questions, String[] answers) {
         System.out.println("\nWelcome to the Brain Games!");
         System.out.println("May I have your name?");
-        Scanner scanner = new Scanner(System.in);
         var name = scanner.next();
         System.out.println("Hello, " + name + "!");
 
