@@ -33,4 +33,8 @@ jobs:
       - name: Build and analyze
         env:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
-        run: ./app/gradlew -p app build sonar --info     
+        run: ./app/gradlew -p app build sonar --info
+          -Dsonar.login=$SONAR_TOKEN \
+          -Dsonar.projectKey=aydar1008_java-project-61 \
+          -Dsonar.organization=aydar1008 \
+          -Dsonar.java.binaries=build/classes

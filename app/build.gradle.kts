@@ -38,5 +38,8 @@ sonar {
         property("sonar.projectKey", "aydar1008_java-project-61")
         property("sonar.organization", "aydar1008")
         property("sonar.host.url", "https://sonarcloud.io")
+        property("sonar.login", System.getenv("SONAR_TOKEN")) // Важно!
+        property("sonar.java.binaries", "build/classes")
+        property("sonar.sourceEncoding", "UTF-8")
     }
 }
