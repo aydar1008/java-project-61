@@ -32,7 +32,7 @@ tasks.test {
     useJUnitPlatform()
 }
 
-// Конфигурация плагина org.sonarqube 2403746d05c901c8da5a8bee6a793e44b394f238
+// Конфигурация плагина org.sonarqube de5b130d40abfa74ea5ae85b5ba78525151dd357
 sonar {
     properties {
         property("sonar.projectKey", "aydar1008_java-project-61")
