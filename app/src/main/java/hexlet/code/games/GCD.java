@@ -14,7 +14,7 @@ public class GCD {
             int num1 = Engine.RANDOM.nextInt(1, MAX_RANDOM_NUMBER);
             int num2 = Engine.RANDOM.nextInt(1, MAX_RANDOM_NUMBER);
             questions[i] = num1 + " " + num2;
-            answers[i] = String.valueOf(num1 > num2 ? num1 / num2 : num2 / num1);
+            answers[i] = String.valueOf(num1 > num2 ? num1 % num2 : num2 % num1);
         }
         Engine.runGame(gameName, questions, answers);
     }
