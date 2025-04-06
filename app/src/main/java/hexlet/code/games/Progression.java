@@ -28,7 +28,7 @@ public class Progression {
 
             answers[i] = progression[searched];
             progression[searched] = "..";
-            questions[i] = (Arrays.toString(progression)).substring(1, Arrays.toString(progression).length() - 1);
+            questions[i] = (Arrays.toString(progression)).substring(1, Arrays.toString(progression).length() - 1).replaceAll(",", "");
         }
         Engine.runGame(gameName, questions, answers);
     }
