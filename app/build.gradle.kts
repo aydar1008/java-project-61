@@ -40,5 +40,6 @@ sonar {
         property("sonar.organization", "aydar1008")
         property("sonar.java.binaries", "build/classes")
         property("sonar.host.url", "https://sonarcloud.io")
+        property("sonar.sourceEncoding", "UTF-8")
     }
 }
