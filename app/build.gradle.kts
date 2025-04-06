@@ -38,6 +38,5 @@ sonar {
         property("sonar.projectKey", "aydar1008_java-project-61")
         property("sonar.organization", "aydar1008")
         property("sonar.host.url", "https://sonarcloud.io")
-        property("sonar.login", "09301f33c03e4ebc9f2db230cfb88550bdd177ea")
     }
 }
