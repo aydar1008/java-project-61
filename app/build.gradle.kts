@@ -32,13 +32,13 @@ tasks.test {
     useJUnitPlatform()
 }
 
-// Конфигурация плагина org.sonarqube fe1f86022637319dce8c2c31c7a4d3edcea4fcb9
+// Конфигурация плагина org.sonarqube 2403746d05c901c8da5a8bee6a793e44b394f238
 sonar {
     properties {
         property("sonar.projectKey", "aydar1008_java-project-61")
         property("sonar.organization", "aydar1008")
         property("sonar.host.url", "https://sonarcloud.io")
-        property("sonar.login", System.getenv("SONAR_TOKEN")) // Важно!
+        property("sonar.login", System.getenv("SONAR_TOKEN"))
         property("sonar.java.binaries", "build/classes")
         property("sonar.sourceEncoding", "UTF-8")
     }
