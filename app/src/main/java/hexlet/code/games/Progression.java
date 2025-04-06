@@ -30,7 +30,7 @@ public class Progression {
             progression[searched] = "..";
             questions[i] = (Arrays.toString(progression))
                     .substring(1, Arrays.toString(progression).length() - 1)
-                    .replaceAll(",", "");
+                    .replace(",", "");
         }
         Engine.runGame(gameName, questions, answers);
     }
