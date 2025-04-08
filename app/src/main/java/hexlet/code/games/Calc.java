@@ -1,6 +1,7 @@
 package hexlet.code.games;
 
 import hexlet.code.Engine;
+import hexlet.code.Utils;
 
 
 public class Calc {
@@ -10,27 +11,30 @@ public class Calc {
         var gameName = "What is the result of the expression?";
         var operators = "+-*";
 
-        String[] questions = new String[Engine.ROUNDS];
-        String[] answers = new String[Engine.ROUNDS];
-        for (int i = 0; i < questions.length; i++) {
-            var num1 = Engine.RANDOM.nextInt(MAX_RANDOM_NUMBER);
-            var num2 = Engine.RANDOM.nextInt(MAX_RANDOM_NUMBER);
-            var opIndex = Engine.RANDOM.nextInt(operators.length());
+        String[][] qaData = new String[Engine.ROUNDS][2];
+        for (String [] qa : qaData) {
+            var num1 = Utils.getRandomNumber(MAX_RANDOM_NUMBER);
+            var num2 = Utils.getRandomNumber(MAX_RANDOM_NUMBER);
+            var opIndex = Utils.getRandomNumber(operators.length());
             var operator = operators.charAt(opIndex);
-            questions[i] = num1 + " " + operator + " " + num2;
+            var question = num1 + " " + operator + " " + num2;
+            String answer = "";
             switch (operator) {
                 case '+':
-                    answers[i] = num1 + num2 + "";
+                    answer = num1 + num2 + "";
                     break;
                 case '-':
-                    answers[i] = num1 - num2 + "";
+                    answer = num1 - num2 + "";
                     break;
                 case '*':
-                    answers[i] = num1 * num2 + "";
+                    answer = num1 * num2 + "";
                     break;
                 default:
             }
+
+            qa[0] = question;
+            qa[1] = answer;
         }
-        Engine.runGame(gameName, questions, answers);
+        Engine.runGame(gameName, qaData);
     }
 }

@@ -1,6 +1,7 @@
 package hexlet.code.games;
 
 import hexlet.code.Engine;
+import hexlet.code.Utils;
 
 import java.util.Arrays;
 
@@ -13,25 +14,27 @@ public class Progression {
     public static void playGame() {
         var gameName = "What number is missing in the progression?";
 
-        String[] questions = new String[Engine.ROUNDS];
-        String[] answers = new String[Engine.ROUNDS];
-        for (int i = 0; i < questions.length; i++) {
-            var progLength = Engine.RANDOM.nextInt(MIN_PROG_LENGTH, MAX_PROG_LENGTH);
-            var step = Engine.RANDOM.nextInt(1, MAX_STEP);
-            var searched = Engine.RANDOM.nextInt(0, progLength);
+        String[][] qaData = new String[Engine.ROUNDS][2];
+        for (String [] qa : qaData) {
+            var progLength = Utils.getRandomNumber(MIN_PROG_LENGTH, MAX_PROG_LENGTH);
+            var step = Utils.getRandomNumber(1, MAX_STEP);
+            var searched = Utils.getRandomNumber(0, progLength);
 
             String[] progression = new String[progLength];
-            progression[0] = "" + Engine.RANDOM.nextInt(0, MAX_RANDOM_NUMBER);
+            progression[0] = "" + Utils.getRandomNumber(0, MAX_RANDOM_NUMBER);
             for (int j = 1; j < progression.length; j++) {
                 progression[j] = Integer.parseInt(progression[j - 1]) + step + "";
             }
 
-            answers[i] = progression[searched];
+            var answer = progression[searched];
             progression[searched] = "..";
-            questions[i] = (Arrays.toString(progression))
+            var questions = (Arrays.toString(progression))
                     .substring(1, Arrays.toString(progression).length() - 1)
                     .replace(",", "");
+
+            qa[0] = questions;
+            qa[1] = answer;
         }
-        Engine.runGame(gameName, questions, answers);
+        Engine.runGame(gameName, qaData);
     }
 }

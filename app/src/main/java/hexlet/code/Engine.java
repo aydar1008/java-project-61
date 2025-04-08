@@ -5,10 +5,9 @@ import java.util.Scanner;
 
 public class Engine {
     public static final int ROUNDS = 3;
-    public static final SecureRandom RANDOM = new SecureRandom();
     public static final Scanner SCANNER = new Scanner(System.in);
 
-    public static void runGame(String gameName, String[] questions, String[] answers) {
+    public static void runGame(String gameName, String[][] qaData) {
         System.out.println("\nWelcome to the Brain Games!");
         System.out.println("May I have your name?");
         var name = SCANNER.next();
@@ -20,21 +19,19 @@ public class Engine {
         var i = 0;
 
         while (sum < ROUNDS) {
-            System.out.println("Question: " + questions[i]);
+            System.out.println("Question: " + qaData[i][0]);
             var answer = SCANNER.next();
-            if (answers[i].equals(answer)) {
-                System.out.println("Correct!");
-                sum++;
-                i++;
-            } else {
-                System.out.println("'" + answer + "' is wrong answer ;(. Correct answer was '" + answers[i]
+            if (!qaData[i][1].equals(answer)) {
+                System.out.println("'" + answer + "' is wrong answer ;(. Correct answer was '" + qaData[i][1]
                         + "'. \nLet's try again, " + name + "!");
-                break;
+                return;
             }
+            System.out.println("Correct!");
+            sum++;
+            i++;
         }
-        if (sum == ROUNDS) {
-            System.out.println("Congratulations, " + name + "!");
-        }
+        System.out.println("Congratulations, " + name + "!");
+
         SCANNER.close();
     }
 }

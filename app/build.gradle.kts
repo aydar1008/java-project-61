@@ -2,7 +2,6 @@ plugins {
     application
     checkstyle
     id("com.github.ben-manes.versions") version "0.52.0"
-    id("java")
     // Плагин для публикации отчета о покрытии тестами на SonarQube
     id("org.sonarqube") version "6.0.1.5171"
 
