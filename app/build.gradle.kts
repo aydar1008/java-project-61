@@ -34,7 +34,7 @@ tasks.test {
 // Конфигурация плагина org.sonarqube de5b130d40abfa74ea5ae85b5ba78525151dd357
 sonar {
     properties {
-        property("sonar.login", System.getenv("SONAR_TOKEN"))
+        property("sonar.token", System.getenv("SONAR_TOKEN"))
         property("sonar.projectKey", "aydar1008_java-project-61")
         property("sonar.organization", "aydar1008")
         property("sonar.java.binaries", "build/classes")
