@@ -12,7 +12,7 @@ public class Calc {
         var operators = "+-*";
 
         String[][] qaData = new String[Engine.ROUNDS][2];
-        for (String [] qa : qaData) {
+        for (String[] qa : qaData) {
             var num1 = Utils.getRandomNumber(MAX_RANDOM_NUMBER);
             var num2 = Utils.getRandomNumber(MAX_RANDOM_NUMBER);
             var opIndex = Utils.getRandomNumber(operators.length());

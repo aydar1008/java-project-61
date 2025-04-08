@@ -10,7 +10,7 @@ public class Even {
         var gameName = "Answer 'yes' if the number is even, otherwise answer 'no'.";
 
         String[][] qaData = new String[Engine.ROUNDS][2];
-        for (String [] qa : qaData) {
+        for (String[] qa : qaData) {
             var question = String.valueOf(Utils.getRandomNumber(MAX_RANDOM_NUMBER));
             var answer = Integer.parseInt(question) % 2 == 0 ? "yes" : "no";
 

@@ -31,7 +31,7 @@ tasks.test {
     useJUnitPlatform()
 }
 
-// Конфигурация плагина org.sonarqube de5b130d40abfa74ea5ae85b5ba78525151dd357
+// Конфигурация плагина org.sonarqube f68835ec3a24b75ac57e5a8b8bc034c9c65da2a0
 sonar {
     properties {
         property("sonar.token", System.getenv("SONAR_TOKEN"))

@@ -15,7 +15,7 @@ public class Progression {
         var gameName = "What number is missing in the progression?";
 
         String[][] qaData = new String[Engine.ROUNDS][2];
-        for (String [] qa : qaData) {
+        for (String[] qa : qaData) {
             var progLength = Utils.getRandomNumber(MIN_PROG_LENGTH, MAX_PROG_LENGTH);
             var step = Utils.getRandomNumber(1, MAX_STEP);
             var searched = Utils.getRandomNumber(0, progLength);

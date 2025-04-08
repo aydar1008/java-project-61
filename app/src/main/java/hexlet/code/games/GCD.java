@@ -10,7 +10,7 @@ public class GCD {
         var gameName = "Find the greatest common divisor of given numbers.";
 
         String[][] qaData = new String[Engine.ROUNDS][2];
-        for (String [] qa : qaData) {
+        for (String[] qa : qaData) {
             int num1 = Utils.getRandomNumber(MAX_RANDOM_NUMBER);
             int num2 = Utils.getRandomNumber(MAX_RANDOM_NUMBER);
             var question = num1 + " " + num2;

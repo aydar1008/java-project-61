@@ -10,6 +10,6 @@ public class Utils {
     }
 
     public static int getRandomNumber(int max) {
-        return RANDOM.nextInt(1, max );
+        return RANDOM.nextInt(1, max);
     }
 }

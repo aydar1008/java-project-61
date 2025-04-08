@@ -10,7 +10,7 @@ public class Prime {
         var gameName = "Answer 'yes' if given number is prime. Otherwise answer 'no'.";
 
         String[][] qaData = new String[Engine.ROUNDS][2];
-        for (String [] qa : qaData) {
+        for (String[] qa : qaData) {
             var num = Utils.getRandomNumber(MAX_RANDOM_NUMBER);
             var question = String.valueOf(num);
 
