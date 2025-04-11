@@ -5,9 +5,10 @@ import hexlet.code.Utils;
 
 public class GCD {
     private static final int MAX_RANDOM_NUMBER = 100;
+    public static final String RULES = "Find the greatest common divisor of given numbers.";
 
     public static void playGame() {
-        var gameName = "Find the greatest common divisor of given numbers.";
+
 
         String[][] qaData = new String[Engine.ROUNDS][2];
         for (String[] qa : qaData) {
@@ -24,6 +25,6 @@ public class GCD {
             qa[0] = question;
             qa[1] = answer;
         }
-        Engine.runGame(gameName, qaData);
+        Engine.runGame(RULES, qaData);
     }
 }

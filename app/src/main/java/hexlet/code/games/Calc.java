@@ -6,9 +6,9 @@ import hexlet.code.Utils;
 
 public class Calc {
     private static final int MAX_RANDOM_NUMBER = 100;
+    public static final String RULES = "What is the result of the expression?";
 
     public static void playGame() {
-        var gameName = "What is the result of the expression?";
         var operators = "+-*";
 
         String[][] qaData = new String[Engine.ROUNDS][2];
@@ -35,6 +35,6 @@ public class Calc {
             qa[0] = question;
             qa[1] = answer;
         }
-        Engine.runGame(gameName, qaData);
+        Engine.runGame(RULES, qaData);
     }
 }

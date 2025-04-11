@@ -10,10 +10,9 @@ public class Progression {
     private static final int MAX_PROG_LENGTH = 10;
     public static final int MAX_STEP = 10;
     private static final int MAX_RANDOM_NUMBER = 100;
+    public static final String RULES = "What number is missing in the progression?";
 
     public static void playGame() {
-        var gameName = "What number is missing in the progression?";
-
         String[][] qaData = new String[Engine.ROUNDS][2];
         for (String[] qa : qaData) {
             var progLength = Utils.getRandomNumber(MIN_PROG_LENGTH, MAX_PROG_LENGTH);
@@ -25,7 +24,6 @@ public class Progression {
             for (int j = 1; j < progression.length; j++) {
                 progression[j] = Integer.parseInt(progression[j - 1]) + step + "";
             }
-
             var answer = progression[searched];
             progression[searched] = "..";
             var questions = (Arrays.toString(progression))
@@ -35,6 +33,6 @@ public class Progression {
             qa[0] = questions;
             qa[1] = answer;
         }
-        Engine.runGame(gameName, qaData);
+        Engine.runGame(RULES, qaData);
     }
 }
