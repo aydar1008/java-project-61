@@ -15,26 +15,27 @@ public class Calc {
         for (String[] qa : qaData) {
             var num1 = Utils.getRandomNumber(MAX_RANDOM_NUMBER);
             var num2 = Utils.getRandomNumber(MAX_RANDOM_NUMBER);
-            var opIndex = Utils.getRandomNumber(operators.length());
-            var operator = operators.charAt(opIndex);
+            var operatorIndex = Utils.getRandomNumber(operators.length());
+            var operator = operators.charAt(operatorIndex);
             var question = num1 + " " + operator + " " + num2;
-            String answer = "";
-            switch (operator) {
-                case '+':
-                    answer = num1 + num2 + "";
-                    break;
-                case '-':
-                    answer = num1 - num2 + "";
-                    break;
-                case '*':
-                    answer = num1 * num2 + "";
-                    break;
-                default:
-            }
+            var answer = String.valueOf(calculate(num1, num2, operator));
 
             qa[0] = question;
             qa[1] = answer;
         }
         Engine.runGame(RULES, qaData);
+    }
+
+    public static int calculate(int a, int b, char operator) {
+        switch (operator) {
+            case '+':
+                return  a + b;
+            case '-':
+                return a - b;
+            case '*':
+                return a * b;
+            default:
+                return 0;
+        }
     }
 }

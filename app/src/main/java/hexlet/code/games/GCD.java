@@ -15,16 +15,20 @@ public class GCD {
             int num1 = Utils.getRandomNumber(MAX_RANDOM_NUMBER);
             int num2 = Utils.getRandomNumber(MAX_RANDOM_NUMBER);
             var question = num1 + " " + num2;
-            while (num2 != 0) {
-                int temp = num2;
-                num2 = num1 % num2;
-                num1 = temp;
-            }
-            var answer = String.valueOf(num1);
+            var answer = String.valueOf(gcd(num1, num2));
 
             qa[0] = question;
             qa[1] = answer;
         }
         Engine.runGame(RULES, qaData);
+    }
+
+    public static int gcd(int a, int b) {
+        while (b != 0) {
+            int temp = b;
+            b = a % b;
+            a = temp;
+        }
+        return a;
     }
 }
