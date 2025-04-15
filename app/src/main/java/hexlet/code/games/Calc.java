@@ -35,7 +35,7 @@ public class Calc {
             case '*':
                 return a * b;
             default:
-                return 0;
+                throw new RuntimeException("Unexpected operator");
         }
     }
 }
